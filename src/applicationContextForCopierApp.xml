@@ -18,7 +18,7 @@
     
 	<!-- Configure Copier class using constructor injection of components -->
 	<bean id="copier" class="factorypractice.lab2.Copier">
-		<constructor-arg name="reader" ref="keyboardReader" />
+		<constructor-arg name="reader" ref="fileReader" />
                 <constructor-arg name="writer" ref="consoleWriter" />
 	</bean>
         

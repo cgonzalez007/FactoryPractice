@@ -20,7 +20,8 @@ public class KeyboardReader implements Reader {
 	 * 
 	 * @return a String representing one line of input.
 	 */
-	public String readln() {
+        @Override
+	public final String readln() {
             System.out.println("Please enter some text, then press return:");
 
             Scanner input = new Scanner(System.in);

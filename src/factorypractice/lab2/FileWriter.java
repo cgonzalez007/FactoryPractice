@@ -20,10 +20,11 @@ public class FileWriter implements Writer {
 	 * 
 	 * @see Writer#writeln()
 	 */
-	public void writeln(String line) {
+        @Override
+	public final void writeln(String line) {
 		boolean append = false;
-		File data = new File(File.separatorChar + "Temp" + 
-			  File.separatorChar + "datacopy.txt");
+		File data = new File("src" + File.separatorChar + 
+                        "datacopy.txt");
 		PrintWriter out = null;
 			  
 		// This is where we setup our streams (append = false means overwrite)

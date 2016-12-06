@@ -10,7 +10,8 @@ package factorypractice.lab2;
  */
 public class MemoryReader implements Reader {
 
-    public String readln() {
+    @Override
+    public final String readln() {
         return "Hey I'm reading memory";
     }
     

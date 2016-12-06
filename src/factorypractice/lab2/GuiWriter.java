@@ -21,7 +21,8 @@ public class GuiWriter implements Writer {
 	 * @param line - a String representing one line of text.
 	 * @see Writer#writeln()
 	 */
-	public void writeln( String line ) {
+        @Override
+	public final void writeln( String line ) {
             JOptionPane.showMessageDialog(null, line);
 	}
 }

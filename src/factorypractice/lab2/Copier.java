@@ -38,7 +38,7 @@ public class Copier {
 	 * Program ends when carriage return is entered. Notice how flexible 
 	 * this is due to polymorphism!
 	 */
-	public void copy() {
+	public final void copy() {
             String line = reader.readln();
             writer.writeln( line );
 	}

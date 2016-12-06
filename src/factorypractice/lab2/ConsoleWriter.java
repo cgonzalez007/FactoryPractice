@@ -19,7 +19,8 @@ public class ConsoleWriter implements Writer {
 	 * @param line - a String representing one line of text.
 	 * @see Writer#writeln()
 	 */
-	public void writeln( String line ) {
+        @Override
+	public final void writeln( String line ) {
             System.out.println("Here is the text you entered, which I've copied below.");
             System.out.println( line );
 	}
