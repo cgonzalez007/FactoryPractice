@@ -50,9 +50,8 @@ public class FoodServiceTipCalculator implements TipCalculator {
 
     @Override
     public final void setInputData(Object inputData) {
-        if(!(inputData instanceof Double) || (Double)inputData < 0) {
-            throw new IllegalArgumentException(
-                    "bill amount must be greater than or equal to zero");
+        if(!(inputData instanceof Double) || (Double)inputData < minBill) {
+            throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }
         this.inputData = inputData;
     }

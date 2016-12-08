@@ -18,21 +18,25 @@
     
 	<!-- Configure Copier class using constructor injection of components -->
 	<bean id="copier" class="factorypractice.lab2.Copier">
-		<constructor-arg name="reader" ref="fileReader" />
-                <constructor-arg name="writer" ref="consoleWriter" />
+		<constructor-arg name="reader" ref="reader" />
+                <constructor-arg name="writer" ref="writer" />
+                
 	</bean>
         
 	<!-- 
             Configure components of Copier for injection. When you want to
             make a change, change the id ref in the above bean.
         -->
-        <bean id="keyboardReader" class="factorypractice.lab2.KeyboardReader"/>
-        <bean id="memoryReader" class="factorypractice.lab2.MemoryReader"/>
-        <bean id="fileReader" class="factorypractice.lab2.FileReader"/>
+        <!--
+        <bean id="reader" class="factorypractice.lab2.KeyboardReader"/>
+        <bean id="reader" class="factorypractice.lab2.MemoryReader"/>
+        -->
+        <bean id="reader" class="factorypractice.lab2.FileReader"/>
         
-        <bean id="consoleWriter" class="factorypractice.lab2.ConsoleWriter"/>
-        <bean id="guiWriter" class="factorypractice.lab2.GuiWriter"/>
-        <bean id="fileWriter" class="factorypractice.lab2.FileWriter"/>
-        
+        <bean id="writer" class="factorypractice.lab2.ConsoleWriter"/>
+        <!--
+        <bean id="writer" class="factorypractice.lab2.GuiWriter"/>
+        <bean id="writer" class="factorypractice.lab2.FileWriter"/>
+        -->
 
 </beans>
